@@ -6,17 +6,19 @@ export function Products ({ products }) {
 		<main className="products">
 			<ul>
 				{products.slice(0, 10).map((product) => (
-					<li key={products.id}>
+					<li key={product.id}>
 						<img
+                            
 							src="https://culturagamer.mx/wp-content/uploads/2021/02/Computadora-gamer-alta-tecnologia-monitor-gabinete-teclado-mouse-gamer.jpg"
 							alt={product.title}
-                            width='40%'
+							width="40%"
 						/>
-						<div>
-							<strong>{product.title}</strong> - ${product.price}
+						<div key={product.id}>
+							<strong key={product.id}>{product.title}</strong> -
+							${product.price}
 						</div>
 						<div>
-							<AddToCartIcon />
+							<AddToCartIcon  />
 						</div>
 					</li>
 				))}
